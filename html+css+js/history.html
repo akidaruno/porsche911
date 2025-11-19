@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porsche 911 — История</title>
+  <link rel="icon" href="img/icon.png" type="image/png" sizes="any" />
+  <link rel="apple-touch-icon" href="img/icon.png" />
+  <meta name="theme-color" content="#ff6a00" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .history-hero{position:relative;min-height:42vh;display:grid;align-items:center;justify-items:center;padding:60px 0}
+    .history-hero::before{content:"";position:absolute;inset:0;background:
+      radial-gradient(800px 300px at 80% 20%, rgba(255,106,0,.35), transparent 60%),
+      linear-gradient(180deg, rgba(10,10,11,.05), rgba(10,10,11,.8));
+      pointer-events:none}
+    .history-hero h1{position:relative;margin:0;font-family:Rajdhani, Inter, sans-serif;font-size: clamp(42px,6vw,72px);
+      background:linear-gradient(135deg,#fff,var(--accent-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .timeline{position:relative;}
+    .timeline::before{content:"";position:absolute;left:calc(50% - 1px);top:0;bottom:0;width:2px;background:rgba(255,255,255,.08)}
+    .milestone{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;margin:28px 0}
+    .milestone:nth-child(even) .milestone__card{grid-column:1}
+    .milestone__card{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));border:1px solid var(--stroke);border-radius:14px;padding:16px;box-shadow:var(--shadow-md)}
+    .milestone__year{display:inline-block;background:linear-gradient(135deg, var(--accent), var(--accent-2));color:#111;padding:6px 10px;border-radius:999px;font-weight:800;margin-bottom:6px}
+    .backbar{display:flex;justify-content:center;padding:20px 0}
+    .backbar a{color:var(--text);text-decoration:none;border:1px solid var(--stroke);padding:10px 14px;border-radius:10px}
+    .backbar a:hover{background:rgba(255,255,255,.06)}
+    @media (max-width: 980px){
+      .milestone{grid-template-columns:1fr}
+      .timeline::before{left:22px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo" aria-label="На главную">
+        <svg class="logo__emblem" width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="emg" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ff6a00"/>
+              <stop offset="100%" stop-color="#ff9933"/>
+            </linearGradient>
+            <linearGradient id="glr" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="#ffffff00"/>
+              <stop offset="50%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#ffffff00"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4c7.6 0 19.5 2.6 24 6v18c0 13.3-10.3 24.6-24 32-13.7-7.4-24-18.7-24-32V10c4.5-3.4 16.4-6 24-6z" fill="url(#emg)"/>
+          <path d="M10 13.5c5.1-2.8 14.7-5 22-5s16.9 2.2 22 5v13.8c0 10.9-8.4 20.5-22 28-13.6-7.5-22-17.1-22-28V13.5z" fill="#0f0f11" opacity=".18"/>
+          <path d="M8 44L42 10" stroke="#1a1a1b" stroke-opacity=".35" stroke-width="6"/>
+          <path d="M14 50L48 16" stroke="#fff" stroke-opacity=".16" stroke-width="2"/>
+          <path d="M40 36h10m-14 6h10m-18 6h10" stroke="#111" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+          <g class="glare-rot">
+            <path d="M-24 32H88" stroke="url(#glr)" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+          </g>
+        </svg>
+        <span class="logo__text">Porsche</span>
+      </a>
+      <nav class="nav__menu" aria-label="Навигация">
+        <a class="nav__link" href="index.html#about">О модели</a>
+        <a class="nav__link" href="index.html#gallery">Галерея</a>
+        <a class="nav__link" href="index.html#specs">Характеристики</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="history-hero">
+    <h1>История Porsche 911</h1>
+  </section>
+
+  <section class="section">
+    <div class="container timeline">
+      <div class="milestone">
+        <div></div>
+        <div class="milestone__card">
+          <span class="milestone__year">1963</span>
+          <h3>Дебют 911 (901)</h3>
+          <p class="muted">Парижский автосалон: миру представлен преемник 356 — будущая икона с заднемоторной компоновкой и уникальным силуэтом.</p>
+        </div>
+      </div>
+      <div class="milestone">
+        <div class="milestone__card">
+          <span class="milestone__year">1973</span>
+          <h3>911 Carrera RS 2.7</h3>
+          <p class="muted">Легендарное «утиное крыло», лёгкий кузов и острые настройки — дорожная версия гоночной машины.</p>
+        </div>
+        <div></div>
+      </div>
+      <div class="milestone">
+        <div></div>
+        <div class="milestone__card">
+          <span class="milestone__year">1997</span>
+          <h3>Поколение 996</h3>
+          <p class="muted">Переход на водяное охлаждение и современную эргономику — новая эпоха в эффективности и надёжности.</p>
+        </div>
+      </div>
+      <div class="milestone">
+        <div class="milestone__card">
+          <span class="milestone__year">2019</span>
+          <h3>992</h3>
+          <p class="muted">Технологии ассистентов, цифровой кокпит и ещё более широкий диапазон возможностей на дороге и треке.</p>
+        </div>
+        <div></div>
+      </div>
+      <div class="backbar">
+        <a href="index.html">← На главную</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porsche 911 — Легенда скорости</title>
+  <meta name="description" content="Современный сайт про Porsche 911: история, дизайн, характеристики. Плавные анимации, параллакс, оранжевая палитра. Авторизация и регистрация." />
+  <link rel="icon" href="img/icon.png" type="image/png" sizes="any" />
+  <link rel="apple-touch-icon" href="img/icon.png" />
+  <meta name="theme-color" content="#ff6a00" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="Porsche 911 — на главную">
+        <svg class="logo__emblem" width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="emg" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ff6a00"/>
+              <stop offset="100%" stop-color="#ff9933"/>
+            </linearGradient>
+            <linearGradient id="glr" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="#ffffff00"/>
+              <stop offset="50%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#ffffff00"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4c7.6 0 19.5 2.6 24 6v18c0 13.3-10.3 24.6-24 32-13.7-7.4-24-18.7-24-32V10c4.5-3.4 16.4-6 24-6z" fill="url(#emg)"/>
+          <path d="M10 13.5c5.1-2.8 14.7-5 22-5s16.9 2.2 22 5v13.8c0 10.9-8.4 20.5-22 28-13.6-7.5-22-17.1-22-28V13.5z" fill="#0f0f11" opacity=".18"/>
+          <path d="M8 44L42 10" stroke="#1a1a1b" stroke-opacity=".35" stroke-width="6"/>
+          <path d="M14 50L48 16" stroke="#fff" stroke-opacity=".16" stroke-width="2"/>
+          <path d="M40 36h10m-14 6h10m-18 6h10" stroke="#111" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+          <g class="glare-rot">
+            <path d="M-24 32H88" stroke="url(#glr)" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+          </g>
+        </svg>
+        <span class="logo__text">Porsche</span>
+      </a>
+
+      <nav class="nav__menu" aria-label="Основная навигация">
+        <a class="nav__icon" href="history.html" title="История 911" aria-label="История Porsche 911"></a>
+        <a class="nav__link" href="#about">О модели</a>
+        <a class="nav__link" href="#features">Драйв</a>
+        <a class="nav__link" href="#gallery">Галерея</a>
+        <a class="nav__link" href="#specs">Характеристики</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn btn--ghost" id="openAuth">Войти</button>
+        <button class="btn btn--primary" data-scroll="#specs">Заказать тест-драйв</button>
+
+        <div class="user" id="userMenu" hidden>
+          <button class="user__chip" id="userChip" aria-haspopup="menu" aria-expanded="false">
+            <span id="userInitials">U</span>
+          </button>
+          <div class="user__menu" role="menu" aria-label="Меню пользователя">
+            <div class="user__name" id="userName">Пользователь</div>
+            <button class="user__action" id="logoutBtn" role="menuitem">Выйти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Героический экран">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="img/hero.jpg" alt="Porsche 911" class="hero__image" id="heroParallax" />
+      <div class="hero__gradient" aria-hidden="true"></div>
+    </div>
+    <div class="container hero__content">
+      <h1 class="hero__title reveal">Porsche 911</h1>
+      <p class="hero__subtitle reveal delay-1">Икона дизайна. Инженерия без компромиссов. Чистый драйв.</p>
+      <div class="hero__cta reveal delay-2">
+        <button class="btn btn--primary" data-scroll="#features">Узнать больше</button>
+        <button class="btn btn--ghost" id="openAuthHero">Авторизация</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--about" id="about">
+    <div class="container grid-2">
+      <div class="stack reveal">
+        <h2 class="section__title">Легенда, проверенная временем</h2>
+        <p class="muted">С 1963 года Porsche 911 остаётся эталоном спортивного автомобиля: заднемоторная компоновка, фирменная посадка, характерный силуэт и технология, отточенная десятилетиями автоспорта.</p>
+        <div class="badges">
+          <span class="badge">0–100 км/ч: 3.2 с</span>
+          <span class="badge">Макс: 330 км/ч</span>
+          <span class="badge">Porsche Doppelkupplung (PDK)</span>
+        </div>
+      </div>
+      <div class="card media reveal delay-1">
+        <img src="img/p1.jpg" alt="Интерьер Porsche 911" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--features" id="features">
+    <div class="container">
+      <h2 class="section__title center reveal">Чистая динамика</h2>
+      <p class="section__subtitle center muted reveal delay-1">Каждый миллиметр 911 создан для удовольствия от вождения.</p>
+
+      <div class="cards">
+        <article class="card reveal">
+          <img src="img/p2.jpg" alt="Аэродинамика Porsche 911" />
+          <div class="card__body">
+            <h3>Аэродинамика</h3>
+            <p>Активные элементы кузова и точные формы обеспечивают прижимную силу и устойчивость на высоких скоростях.</p>
+          </div>
+        </article>
+        <article class="card reveal delay-1">
+          <img src="img/p3.jpg" alt="Тормоза Porsche 911" />
+          <div class="card__body">
+            <h3>Цифровой кокпит</h3>
+            <p>Интуитивный интерфейс, высокое разрешение дисплеев и премиальные материалы — фокус на водителе.</p>
+          </div>
+        </article>
+        <article class="card reveal delay-2">
+          <img src="img/p4.jpg" alt="Салон Porsche 911" />
+          <div class="card__body">
+            <h3>Тормозная система</h3>
+            <p>Карбон-керамические диски (PCCB) для стабильности и минимального фейдинга на треке и в городе.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gallery" id="gallery">
+    <div class="container">
+      <h2 class="section__title center reveal">Галерея</h2>
+      <div class="masonry">
+        <img class="reveal" src="img/p1.jpg" alt="Porsche 911 вид 1" />
+        <img class="reveal delay-1" src="img/p2.jpg" alt="Porsche 911 вид 2" />
+        <img class="reveal delay-2" src="img/p3.jpg" alt="Porsche 911 вид 3" />
+        <img class="reveal" src="img/p4.jpg" alt="Porsche 911 вид 4" />
+        <img class="reveal delay-1" src="img/p5.jpg" alt="Porsche 911 вид 5" />
+        <img class="reveal delay-2" src="img/p6.jpg" alt="Porsche 911 вид 6" />
+        <img class="reveal" src="img/p7.jpg" alt="Porsche 911 вид 7" />
+        <img class="reveal delay-1" src="img/p8.jpg" alt="Porsche 911 вид 8" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--specs" id="specs">
+    <div class="container grid-2">
+      <div class="stack reveal specs-block">
+        <h2 class="section__title center">Характеристики</h2>
+        <div class="card card--glass">
+          <ul class="specs">
+            <li data-icon="engine"><span>Двигатель</span><strong>3.0 л битурбо оппозитный</strong></li>
+            <li data-icon="power"><span>Мощность</span><strong>до 478 л.с.</strong></li>
+            <li data-icon="torque"><span>Крутящий момент</span><strong>до 570 Н·м</strong></li>
+            <li data-icon="drive"><span>Привод</span><strong>задний / полный</strong></li>
+            <li data-icon="gear"><span>Трансмиссия</span><strong>PDK / МКП</strong></li>
+          </ul>
+        </div>
+        <button class="btn btn--primary" id="ctaTest">Записаться на тест-драйв</button>
+      </div>
+
+      <div class="stack reveal delay-1">
+        <h3 class="section__subtitle">Готовы почувствовать 911?</h3>
+        <p class="muted">Зарегистрируйтесь и оставьте заявку — наш консультант свяжется с вами, чтобы подобрать конфигурацию и предложить лучший маршрут для тест-драйва.</p>
+        <ul class="bullets">
+          <li>Персональная консультация</li>
+          <li>Гибкие даты и время</li>
+          <li>Рекомендации по комплектации</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Porsche 911 Fan</span>
+      <a href="#top" class="to-top" aria-label="Наверх">↑</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal" aria-hidden="true" aria-labelledby="authTitle" role="dialog">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" aria-label="Закрыть" data-close>×</button>
+      <div class="tabs" role="tablist" aria-label="Авторизация">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="login">Войти</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="register">Регистрация</button>
+      </div>
+
+      <div class="tabpanels">
+        <form class="panel is-active" id="loginForm" data-panel="login" novalidate>
+          <h3 id="authTitle">Вход</h3>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Пароль
+            <input type="password" name="password" autocomplete="current-password" required minlength="6" />
+          </label>
+          <button class="btn btn--primary" type="submit">Войти</button>
+          <p class="form__error" id="loginError" role="alert" aria-live="polite"></p>
+        </form>
+
+        <form class="panel" id="registerForm" data-panel="register" novalidate>
+          <h3>Регистрация</h3>
+          <label>
+            Имя
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Пароль
+            <input type="password" name="password" autocomplete="new-password" required minlength="6" />
+          </label>
+          <button class="btn btn--primary" type="submit">Создать аккаунт</button>
+          <p class="form__error" id="registerError" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="modal site-lock" id="siteLockModal" aria-hidden="false" role="dialog">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog" role="document">
+      <div class="lock-content">
+        <svg class="lock-icon" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="lockGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ff6a00"/>
+              <stop offset="100%" stop-color="#ff9933"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 8c-4.4 0-8 3.6-8 8v8h-4c-2.2 0-4 1.8-4 4v24c0 2.2 1.8 4 4 4h32c2.2 0 4-1.8 4-4V28c0-2.2-1.8-4-4-4h-4v-8c0-4.4-3.6-8-8-8zm0 4c2.2 0 4 1.8 4 4v8h-8v-8c0-2.2 1.8-4 4-4zm-8 12h16v20H24V24z" fill="url(#lockGrad)"/>
+        </svg>
+        <h2 class="lock-title">Доступ ограничен</h2>
+        <p class="lock-subtitle">Введите пароль для просмотра сайта</p>
+        <form id="lockForm" class="lock-form">
+          <input type="password" id="lockPassword" placeholder="Пароль" required autofocus />
+          <button type="submit" class="btn btn--primary">Разблокировать</button>
+        </form>
+        <p class="lock-error" id="lockError"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
